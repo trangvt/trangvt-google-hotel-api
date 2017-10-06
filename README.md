@@ -2,15 +2,20 @@
 
 Framework: CodeIgniter 3.1.6
 
-This is an API of Google allows you to post your hotel on Google search
+This is an API of Google allows you to post your hotels (or properties) on Google
 https://developers.google.com/hotels/hotel-ads/
 
-It contains 2 parts: One-time Tasks & On-going Tasks. But in this project I only represent One-time Tasks
+I use apidocjs to creat the API doc in this project
+
+It contains 2 parts: One-time Tasks & On-going Tasks.
+But in this project I only represent One-time Tasks
 https://developers.google.com/hotels/hotel-ads/dev-guide/data-feeds
 
-Step 1: Create a Hotel List Feed: Upload an XML or CSV file that lists all hotels for which you will provide pricing information; the Hotel List Feed itself does not contain pricing information.
+Step 1: Create a Hotel List Feed
+Upload an XML or CSV file that lists all hotels for which you will provide pricing information;
+the Hotel List Feed itself does not contain pricing information.
 
-=> Create a contrllor to get hotel infomation from DB and results are XML format
+=> Create a controller to get hotel infomation from DB and results are XML format
 application/controllers/Hotel.php
 http://localhost/trangvt-google-hotel-api/index.php/google-api/hotel-list-feed
 
