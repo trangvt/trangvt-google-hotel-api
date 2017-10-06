@@ -9,6 +9,14 @@ class Hotel extends CI_Controller {
         parent::__construct();
     }
 
+    /**
+     * @api {get} google-api/hotel-list-feed Get Hotel List Feed.
+     * @apiVersion 1.0.0
+     * @apiName GetUser
+     * @apiGroup Hotel
+     *
+     * @apiDescription Get hotel list feed
+     */
     public function hotelListFeed()
     {
         $hotels = '';
