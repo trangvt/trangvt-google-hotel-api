@@ -1,0 +1,34 @@
+Params
+
+1. @api - Required
+@api {method} path [title]
+@api {get} google-api/hotel-list-feed Get Hotel List Feed.
+
+2. @apiVersion
+@apiVersion 1.0.0
+
+3. @apiName - Should always be used.
+@apiName hotelListFeed
+Used as navigation title.
+
+4. @apiGroup - Should always be used.
+@apiGroup Hotel
+Name of the group. Also used as navigation title.
+
+5. @apiDescription
+Multiline description text.
+
+* @apiDescription Get hotel list feed
+*
+* Some note:
+*
+* Omit XML elements that do not contain data
+
+6. @apiParam
+Describe a parameter passed to your API-Method.
+@apiParam [(group)] [{type}] [field=defaultValue] [description]
+
+7. @apiSuccess
+Success return Parameter.
+@apiSuccess [(group)] [{type}] field [description]
+@apiSuccess {String}  [listing.address.addr2]     The secondary street address, if necessary.
