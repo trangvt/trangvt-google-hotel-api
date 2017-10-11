@@ -18,6 +18,6 @@
 4. Run
     apidoc -i myapp/ -o apidoc/ -t mytemplate/
 In this case, run
-    apidoc -i application/controllers -o apidoc/
+    trangvt-google-hotel-api$ apidoc -i application/controllers -o apidoc/
 
 After executes the command, apidoc will be created
