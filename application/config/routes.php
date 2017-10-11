@@ -54,3 +54,5 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['google-api/hotel-list-feed'] = 'hotel/hotelListFeed';
+$route['google-api/rooms'] = 'room/roomMetadata';
+

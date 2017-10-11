@@ -1,0 +1,37 @@
+Step 2: Define room and package metadata.
+
+Room Bundles
++ defines multiple room types for a single property (This is step 2)
++ combines an itinerary of a room with additional services and conditions of sale to your users beyond a standard price.
+
+A. Room Bundle metadata
+
+Includes
+    + the description, amenities, and other information about the Room Bundle ahead of time.
+    + 2 elements <RoomData> and <PackageData>
+
+B. Defining room and package metadata
+
+    + Define room and package metadata in a Transaction message.
+    + Update room and package metadata with a new Transaction message.
+    + Use 2 elements <PackageData> and/or <RoomData> (separate from pricing updates)
+    + Reference the <RoomID> and <PackageID> values in <Results> blocks of pricing updates.
+
+C. Room Bundle syntax
+The structure of the Transaction message depends on what you are doing.
+1) Room Bundle metadata
+Use a <PackageData> element inside a <PropertyDataSet> element to define metadata about the Room Bundle.
+https://developers.google.com/hotels/hotel-ads/dev-guide/transaction-syntax#propertydatasetelement
+
+2) Room Bundle pricing and availability
+Use a <RoomBundle> element inside the <Result> element of a Transaction message for each package/itinerary combination.
+
+You must define at least one Room Bundle that matches your base room rate.
+
+3) Data precedence
+The ordering is as follows, from lowest to highest precedence
+<PartnerData>
+<PropertyData>
+<RoomData>, where the <RoomID> matches the <RoomID> in the <RoomBundle> block
+<PackageData>, where the <PackageID> matches the <PackageID> in the <RoomBundle> block
+<RoomBundle>
