@@ -10,7 +10,7 @@ class Hotel extends CI_Controller {
     }
 
     /**
-     * @api {get} google-api/hotel-list-feed Get Hotel List Feed.
+     * @api {get} google-api/hotel-list-feed Get Hotel List Feed
      * @apiVersion 1.0.0
      * @apiName hotelListFeed
      * @apiGroup Hotel
@@ -46,6 +46,35 @@ class Hotel extends CI_Controller {
      * @apiSuccess {String}     listing.latitude            The latitude that corresponds to the location of the listing
      * @apiSuccess {String}     listing.longitude           The longitude that corresponds to the location of the listing
      * @apiSuccess {String}     listing.phone               Contact numbers of the hotel.
+     *
+     * @apiSuccessExample {xml} Success-Response:
+     * <?xml version="1.0" encoding="UTF-8"?>
+     * <listings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.gstatic.com/localfeed/local_feed.xsd">
+     *      <language>Set the value of this element to a two-letter language code</language>
+     *      <listing>
+     *          <id>001</id>
+     *          <name><![CDATA[ホテル!]]></name>
+     *          <address format="simple">
+     *               <component name="addr1">76 Trombones Road</component>
+     *               <component name="addr2">Floor 5</component>
+     *               <component name="city">Boston</component>
+     *               <component name="province">MA</component>
+     *               <component name="postal_code">02472</component>
+     *          </address>
+     *          <country>US</country>
+     *          <latitude>37.423738</latitude>
+     *          <longitude>-122.090101</longitude>
+     *          <phone type="main">123-456-7890</phone>
+     *          <phone type="fax">987-654-3210</phone>
+     *      </listing>
+     *
+     *      <listing>
+     *          ...
+     *          Or you can provide a "freeform" address
+     *          <address>76 Trombones Road, Floor 5, Boston, MA, 02472</address>
+     *      <listing>
+     * </listings>
      */
     public function hotelListFeed()
     {
@@ -75,41 +104,3 @@ class Hotel extends CI_Controller {
         echo $hotels;
     }
 }
-
-
-
-/**
-Hotel List Feed XML Syntax
-https://developers.google.com/hotels/hotel-ads/dev-guide/hlf-syntax
-
-XML format
-
-<listings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="http://www.gstatic.com/localfeed/local_feed.xsd">
-    <language>Set the value of this element to a two-letter language code</language>
-    <listing>
-        <id>001</id>
-        <name><![CDATA[ホテル!]]></name>
-        <address format="simple">
-            <component name="addr1">76 Trombones Road</component>
-            <component name="addr2">Floor 5</component>
-            <component name="city">Boston</component>
-            <component name="province">MA</component>
-            <component name="postal_code">02472</component>
-        </address>
-        Or you can provide a "freeform" address
-        <address>76 Trombones Road, Floor 5, Boston, MA, 02472</address>
-
-        <country>US</country>
-        <latitude>37.423738</latitude>
-        <longitude>-122.090101</longitude>
-        <phone type="main">123-456-7890</phone>
-        <phone type="fax">987-654-3210</phone>
-        Either a phone number OR latitude/longitude are required. Both are preferred.
-    </listing>
-
-    <listing>
-     ...
-    <listing>
-</listings>
-*/
