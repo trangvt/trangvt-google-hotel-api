@@ -76,8 +76,7 @@ class Hotel extends CI_Controller {
      *      <listing>
      * </listings>
      */
-    public function hotelListFeed()
-    {
+    public function hotelListFeed() {
         $hotels = '<?xml version="1.0" encoding="UTF-8"?>';
         $hotels .= '<listings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="http://www.gstatic.com/localfeed/local_feed.xsd">';
@@ -96,6 +95,10 @@ class Hotel extends CI_Controller {
         $hotels .= '<latitude>37.423738</latitude>';
         $hotels .= '<longitude>-122.090101</longitude>';
         $hotels .= '<phone type="main">123-456-7890</phone>';
+        $hotels .= '</listing>';
+
+        $hotels .= '<listing>';
+        $hotels .= '<address>76 Trombones Road, Floor 5, Boston, MA, 02472</address>';
         $hotels .= '</listing>';
 
         $hotels .= '</listings>';
