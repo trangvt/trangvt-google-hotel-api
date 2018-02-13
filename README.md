@@ -10,25 +10,28 @@ http://apidocjs.com/
 View API doc in local
 http://localhost/trangvt-google-hotel-api/apidoc/
 
-**NOTE**: Just created wrap functions to get data.
+**NOTE**
+- Just created wrap functions to get data.
+- Source code in application/
+- Google Hotel Prices and Hotel Ads APIs note in google-hote-api/
+- apidocjs note in apidocjs.com/
 
 **Google Hotel Prices and Hotel Ads APIs** is an API of Google allows you to post your hotels (or properties) on Google. 
 
-> https://support.google.com/hotelprices/answer/6101897
 There are two ways you can integrate to display your properties on Google. In this source, I choose the second way
-So, you need request to create an account before you can integrate with it.
+So, you need request to create an account before you can integrate with it. Please visit the below link to find the request link
+
+> https://support.google.com/hotelprices/answer/6101897
 
 **Integration Overview**
+
 It contains 2 parts: One-time Tasks & On-going Tasks.
 But in this project I only represented One-time Tasks
 https://developers.google.com/hotels/hotel-ads/dev-guide/data-feeds
 
 **- Step 1: Create a Hotel List Feed**
 
-Upload an XML or CSV file that lists all hotels for which you will provide pricing information;
-the Hotel List Feed itself does not contain pricing information.
-
-=> Create a controller to get hotel infomation from DB and results are XML format
+=> Create a controller to get hotel infomation from DB and results are XML format. Because the doc use XML format, so I encourage you use XML format
 
 > application/controllers/Hotel.php
 

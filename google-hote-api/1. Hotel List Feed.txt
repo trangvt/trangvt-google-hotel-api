@@ -1,0 +1,25 @@
+Hotel List Feed XML Reference
+https://developers.google.com/hotels/hotel-ads/xml-reference/hotel-list-feed
+
+Syntax guidelines
+https://developers.google.com/hotels/hotel-ads/xml-reference/hotel-list-feed#listings
+
+Hotel List Feed XML hierarchy:
++ <listings> : The root element
+    + <language>: Set the value of this element to a two-letter language code
+    + <listing> : at least one child elements
+        + <id> : unique
+        + <name>
+        + <address>
+        + <country>
+        + <latitude>
+        + <longitude>
+        + <phone> : five types of phone are main, tollfree, fax, tdd, mobile
+        + <category> [Optional]
+        + <content> [Optional]
+            + <review> [Optional]
+
+NOTE:
+Omit XML elements that do not contain data
+Either a phone number OR latitude/longitude are required. Both are preferred.
+To validate your feed prior to uploading, you can use the local feed XSD "http://www.gstatic.com/localfeed/local_feed.xsd".

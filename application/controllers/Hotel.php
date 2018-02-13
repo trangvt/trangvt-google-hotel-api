@@ -17,19 +17,9 @@ class Hotel extends CI_Controller {
      *
      * @apiDescription Get hotel list feed
      *
-     * Some note:
-     *
-     * Omit XML elements that do not contain data
-     *
-     * At a minimum, you must provide the street address, city, state/region, and postal code for the hotel
-     *
-     * Either a phone number OR latitude/longitude are required. Both are preferred.
-     *
-     * There are five types of phone: main, tollfree, fax,tdd, mobile. At a minimum, you should provide a main type.
-     *
-     * To validate your feed prior to uploading, you can use the local feed XSD "http://www.gstatic.com/localfeed/local_feed.xsd".
-     *
      * Access for more information: https://developers.google.com/hotels/hotel-ads/dev-guide/hlf-syntax
+     *
+     * Note folder: trangvt-google-hotel-api/google-hote-api/Hotel List Feed.txt
      *
      * @apiSuccess {String}     language                    The language in which your feed is written. Set the value of this element to a two-letter language code. Ex: ja
      * @apiSuccess {Object[]}   listing                     List of hotel
@@ -51,7 +41,7 @@ class Hotel extends CI_Controller {
      * <?xml version="1.0" encoding="UTF-8"?>
      * <listings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://www.gstatic.com/localfeed/local_feed.xsd">
-     *      <language>Set the value of this element to a two-letter language code</language>
+     *      <language>en</language>
      *      <listing>
      *          <id>001</id>
      *          <name><![CDATA[ホテル!]]></name>
