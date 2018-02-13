@@ -7,10 +7,18 @@ https://developers.google.com/hotels/hotel-ads/
 - apidocjs
 http://apidocjs.com/
 
-**NOTE**: Just created function to get data.
+View API doc in local
+http://localhost/trangvt-google-hotel-api/apidoc/
 
-**Google Hotel Prices and Hotel Ads APIs** is an API of Google allows you to post your hotels (or properties) on Google
+**NOTE**: Just created wrap functions to get data.
 
+**Google Hotel Prices and Hotel Ads APIs** is an API of Google allows you to post your hotels (or properties) on Google. 
+
+> https://support.google.com/hotelprices/answer/6101897
+There are two ways you can integrate to display your properties on Google. In this source, I choose the second way
+So, you need request to create an account before you can integrate with it.
+
+**Integration Overview**
 It contains 2 parts: One-time Tasks & On-going Tasks.
 But in this project I only represented One-time Tasks
 https://developers.google.com/hotels/hotel-ads/dev-guide/data-feeds
@@ -29,15 +37,23 @@ the Hotel List Feed itself does not contain pricing information.
 **- Step 2: Define room and package metadata.**
 https://developers.google.com/hotels/hotel-ads/dev-guide/room-bundles#metadata
 
-=> Create a controller to get metadata of hotel from DB results are XML format
+=> Create a controller to get metadata of hotel from DB and results are XML format
 
 > application/controllers/Room.php
 
 > http://localhost/trangvt-google-hotel-api/index.php/google-api/rooms
 
-Step 3: Choose a delivery mode: Decide whether to use Pull or Pull with Hints delivery mode to share your hotel prices with Google.
+**-Step 3: Choose a delivery mode**
+https://developers.google.com/hotels/hotel-ads/dev-guide/delivery-mode
 
-I use Pull
+Decide whether to use Pull or Pull with Hints delivery mode to share your hotel prices with Google.
+I use Pull: https://developers.google.com/hotels/hotel-ads/dev-guide/delivery-mode#pull
+
+=> Create a controller for query
+
+> application/controllers/Query.php
+
+> http://localhost/trangvt-google-hotel-api/index.php/google-api/query-message
 
 Step 4: Define endpoints and query controls
 
